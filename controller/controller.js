@@ -10,7 +10,7 @@ const predict = async(req,res)=>{
         }
         const formData = new FormData()
         formData.append("file",req.file.buffer,req.file.originalname)
-        response = await axios.post("http://127.0.0.1:8000/predict",formData,
+        response = await axios.post("https://waste-classifier-model.onrender.com/predict",formData,
             {headers:formData.getHeaders()}
         )
         res.json({
