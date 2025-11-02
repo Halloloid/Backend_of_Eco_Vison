@@ -9,7 +9,9 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-    origin:'https://eco-vision-sable.vercel.app',
+    origin:['https://eco-vision-sable.vercel.app',
+        'https://eco-vision-hu1hpr6mv-animation12321567-9965s-projects.vercel.app'
+    ],
     credentials:true
 }))
 app.use(express.json())
